@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<th:block th:replace="~{layout :: head(Top)}"></th:block>
+<body>
+<th:block th:replace="~{layout :: header}"></th:block>
+
+<h2>ゲーム登録</h2>
+    <form th:action="@{/gameManagement/list}" method="post">
+        <p>タイトル：<input type="text" name="title"></p>
+        <p>メーカー：<input type="text" name="maker"></p>
+        <p>発売日：<input type="date" name="release_date"></p>
+        <p>ジャンル：<input type="text" name="genre"></p>
+        <p>対応機種：<input type="text" name="console"></p>
+        <p>モード：<input type="text" name="mode"></p>
+        <p>シリーズ：<input type="text" name="series"></p>
+        <p>金額：<input type="text" name="price"></p>
+        <p>データ容量：<input type="text" name="data_storage"></p>
+        <p>対応言語：<input type="text" name="language"></p>
+        <p>CERO：<input type="text" name="cero"></p>
+        <button type="submit">登録</button>
+    </form>
+
+    <th:block th:replace="~{layout :: footer}"></th:block>
+    <th:block th:replace="~{layout :: script}"></th:block>
+</body>
+</html>

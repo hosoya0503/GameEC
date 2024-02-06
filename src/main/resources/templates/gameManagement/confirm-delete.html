@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<th:block th:replace="~{layout :: head(Top)}"></th:block>
+<body>
+<th:block th:replace="~{layout :: header}"></th:block>
+
+<h3>削除画面</h3>
+<div th:object="${gameManagement}">
+    <p>ID：<span th:text="*{id}">0</span></p>
+    <p>タイトル：<span th:text="*{title}">sample title</span></p>
+    <p>メーカー：<span th:text="*{maker}">sample</span></p>
+    <p>発売日：<span th:text="*{release_date}">sample</span></p>
+    <p>ジャンル：<span th:text="*{genre}">sample</span></p>
+    <p>対応機種：<span th:text="*{console}">sample</span></p>
+    <p>モード：<span th:text="*{mode}">sample</span></p>
+    <p>シリーズ：<span th:text="*{series}">sample</span></p>
+    <p>金額：<span th:text="*{price}">sample</span></p>
+    <p>データ容量：<span th:text="*{data_storage}">sample</span></p>
+    <p>対応言語：<span th:text="*{language}">sample</span></p>
+    <p>CERO：<span th:text="*{cero}">sample</span></p>
+</div>
+<a th:href="@{/gameManagement/delete(Id=${gameManagement.id})}">削除</a>
+<a th:href="@{/gameManagement/list}" class="btn btn-secondary">キャンセル</a>
+
+<th:block th:replace="~{layout :: footer}"></th:block>
+<th:block th:replace="~{layout :: script}"></th:block>
+</body>
+</html>

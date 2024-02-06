@@ -3,6 +3,7 @@ package jp.ac.morijyobi.game_management.controller;
 import jp.ac.morijyobi.game_management.bean.entity.GameManagement;
 import jp.ac.morijyobi.game_management.bean.form.GameManagementForm;
 import jp.ac.morijyobi.game_management.service.GameManagementService;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -64,6 +65,7 @@ public class GameManagementController {
 
         return "redirect:/gameManagement/list";
     }
+
 
     @GetMapping("/display-details")
     public String displayDetails(@RequestParam int gameManagementId,
